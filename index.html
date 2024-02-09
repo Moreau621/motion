@@ -5,12 +5,13 @@
     
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
-        <a-marker preset="hiro" position="0 0 0" rotation="-90 0 0">
+               <a-marker preset='custom' position="0 0 20" type='pattern' url='assets/pattern-KM.patt'>       </a-marker>
             <a-video src="assets/video2.mp4" width="24" height="12" rotation="-90 0 0" scale="1.5" position="0 0 0" autoplay></a-video>
         </a-marker>
 
 
-       <a-marker-camera preset='custom' position="0 0 20" type='pattern' url='assets/pattern-KM.patt'>        <a-camera position="0 0 20"></a-camera></a-marker-camera>
+
+            <a-camera position="0 0 20"></a-camera>
         </a-scene>
         <script>window.addEventListener("onload", () => {document.querySelector("a-video").play()
     console.log("ok")})</script>
